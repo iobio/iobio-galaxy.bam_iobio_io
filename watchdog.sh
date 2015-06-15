@@ -1,5 +1,5 @@
 #!/bin/bash
-visited=0
+visited=1
 while true; do
 	sleep 60
 	timestamp=$(date +%T)

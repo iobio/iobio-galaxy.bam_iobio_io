@@ -6,6 +6,9 @@ CYAN='\033[1;36m'
 NC='\033[0m'
 
 cd /var/www/html
+sed -i "s@window.location.hostname@\"${PUB_HOSTNAME}\"@" js/bam.iobio.js/bam.iobio.js
+sed -i "s@window.location.port@${PUB_HTTP_PORT}@" js/bam.iobio.js/bam.iobio.js
+
 
 echo ""
 echo "Please point your browser to the following URL"

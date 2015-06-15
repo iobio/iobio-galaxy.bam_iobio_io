@@ -16,4 +16,4 @@ docker run -it \
 	-v ${1}.bai:/input/bamfile.bam.bai:ro \
 	-e PUB_HOSTNAME \
 	-e PUB_HTTP_PORT \
-	--rm qiaoy/iobio-galaxy.bam_iobio_io:rproxy
+	--rm qiaoy/iobio-galaxy.bam_iobio_io
