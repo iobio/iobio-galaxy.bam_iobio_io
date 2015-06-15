@@ -6,11 +6,9 @@ CYAN='\033[1;36m'
 NC='\033[0m'
 
 cd /var/www/html
-sed -i s/:8000/:$PUB_BAMTOOLS_PORT/ js/bam.iobio.js/bam.iobio.js
-sed -i s/:8001/:$PUB_SAMTOOLS_PORT/ js/bam.iobio.js/bam.iobio.js
-sed -i s/:8002/:$PUB_BAMDEPTHER_PORT/ js/bam.iobio.js/bam.iobio.js
-sed -i s/:8003/:$PUB_BAMMERGER_PORT/ js/bam.iobio.js/bam.iobio.js
-sed -i s/:8004/:$PUB_BAMSTATSALIVE_PORT/ js/bam.iobio.js/bam.iobio.js
+sed -i "s@window.location.hostname@\"${PUB_HOSTNAME}\"@" js/bam.iobio.js/bam.iobio.js
+sed -i "s@window.location.port@${PUB_HTTP_PORT}@" js/bam.iobio.js/bam.iobio.js
+
 
 echo ""
 echo "Please point your browser to the following URL"

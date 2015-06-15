@@ -6,6 +6,8 @@ COPY nginx-sites-default /etc/nginx/sites-available/default
 COPY app.conf /etc/supervisor/conf.d/
 COPY entrypoint.sh /
 COPY watchdog.sh /
+RUN cd /var/www && rm -rf html && git clone https://github.com/chmille4/bam.iobio.io html && cd html && git checkout galaxy-docker
+
 RUN chmod +x /entrypoint.sh && \
 	chmod +x /watchdog.sh && \
 	mkdir /input && \
